@@ -5,4 +5,8 @@ python:
 install:
   - pip install -r requirements-test.txt
 script:
+  - pylint src/
+  - pylint tests/*.py
+  - pycodestyle src/
+  - pycodestyle tests/
   - pytest
